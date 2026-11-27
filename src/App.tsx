@@ -1,40 +1,31 @@
-type SectionId = "frases" | "cultura" | "transporte";
-
-type Section = {
-  id: SectionId;
-  title: string;
-};
+import { Card } from "./components/Card";
+import type { Section } from "./types";
 
 const SECTIONS: Section[] = [
-  { id: "frases", title: "Frases" },
-  { id: "cultura", title: "Cultura" },
-  { id: "transporte", title: "Transporte" },
+  { id: "essential-phrases", title: "Frases" },
+  { id: "culture", title: "Cultura" },
+  { id: "transit", title: "Transporte" },
 ];
 
 function App() {
   return (
-    <>
+    <main>
       <h1>Olá, Nick! 🇧🇷</h1>
-      <div
+      <ul
+        role="list"
         style={{
           display: "flex",
           gap: "10px",
+          listStyle: "none",
+          margin: 0,
+          padding: 0,
         }}
       >
         {SECTIONS.map(({ id, title }) => (
-          <div
-            key={id}
-            style={{
-              border: "solid 1px black",
-              borderRadius: "10px",
-              padding: "10px",
-            }}
-          >
-            <span>{title}</span>
-          </div>
+          <Card key={id} title={title} />
         ))}
-      </div>
-    </>
+      </ul>
+    </main>
   );
 }
 

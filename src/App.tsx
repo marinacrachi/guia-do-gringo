@@ -2,15 +2,15 @@ import { Card } from "./components/Card";
 import type { Section } from "./types";
 
 const SECTIONS: Section[] = [
-  { id: "essential-phrases", title: "Frases" },
-  { id: "culture", title: "Cultura" },
-  { id: "transit", title: "Transporte" },
+  { id: "essential-phrases", title: "Essential Phrases" },
+  { id: "culture", title: "Culture" },
+  { id: "transit", title: "Transit" },
 ];
 
 function App() {
   return (
     <main>
-      <h1>Olá, Nick! 🇧🇷</h1>
+      <h1>Hello, Nick! 🇧🇷</h1>
       <ul
         role="list"
         style={{

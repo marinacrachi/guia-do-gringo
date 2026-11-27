@@ -1,4 +1,5 @@
 import { Card } from "./components/Card";
+import { Footer } from "./components/Footer";
 import type { Section } from "./types";
 
 const SECTIONS: Section[] = [
@@ -9,23 +10,26 @@ const SECTIONS: Section[] = [
 
 function App() {
   return (
-    <main>
-      <h1>Hello, Nick! 🇧🇷</h1>
-      <ul
-        role="list"
-        style={{
-          display: "flex",
-          gap: "10px",
-          listStyle: "none",
-          margin: 0,
-          padding: 0,
-        }}
-      >
-        {SECTIONS.map(({ id, title }) => (
-          <Card key={id} title={title} />
-        ))}
-      </ul>
-    </main>
+    <>
+      <main>
+        <h1>Hello, Nick! 🇧🇷</h1>
+        <ul
+          role="list"
+          style={{
+            display: "flex",
+            gap: "10px",
+            listStyle: "none",
+            margin: 0,
+            padding: 0,
+          }}
+        >
+          {SECTIONS.map(({ id, title }) => (
+            <Card key={id} title={title} />
+          ))}
+        </ul>
+      </main>
+      <Footer />
+    </>
   );
 }
 
